@@ -19,7 +19,7 @@ public class Gleeble : MonoBehaviour
     {
         if (myTurnNow == false)
         {
-            if (turnCountUp == < 5000)
+            if (turnCountUp < 5000)
             {
                 turnCountUp = turnCountUp + gleebleSpeed;
             }
