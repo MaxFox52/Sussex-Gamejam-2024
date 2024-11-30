@@ -1000,6 +1000,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Captain: {fileID: 1575000216}
   Gleeble: {fileID: 1527363368}
+  CaptainAttackButton: {fileID: 1265075048}
+  GleebleAttackButton: {fileID: 91013666}
   aTurnActive: 0
 --- !u!4 &1565179026
 Transform:
