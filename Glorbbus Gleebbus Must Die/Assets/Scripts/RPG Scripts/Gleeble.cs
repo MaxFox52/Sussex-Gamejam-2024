@@ -37,7 +37,7 @@ public class Gleeble : MonoBehaviour
 
     public void myTurnStart()
     {
-        Debug.Log("Turn");
+        Debug.Log("Gleeble Turn");
         myTurnNow = false;
     }
 }
