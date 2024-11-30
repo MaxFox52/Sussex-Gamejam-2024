@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class Captain : MonoBehaviour
 {
-    public int captainAttack;
-    public int captainHealth;
+    public FightController FightController;
+
+    public int captainAttack = 25;
+    public int captainHealth = 150;
     public int captainSpeed = 120;
 
     public int turnCountUp = 0;
@@ -18,14 +20,17 @@ public class Captain : MonoBehaviour
     {
         if (myTurnNow == false)
         {
-            if (turnCountUp < 5000)
+            if (FightController.aTurnActive == false)
             {
-                turnCountUp = turnCountUp + captainSpeed;
-            }
-            else
-            {
-                turnCountUp = 0;
-                myTurnNow = true;
+                if (turnCountUp < 5000)
+                {
+                    turnCountUp = turnCountUp + captainSpeed;
+                }
+                else
+                {
+                    turnCountUp = 0;
+                    myTurnNow = true;
+                }
             }
         }
         else
@@ -37,6 +42,11 @@ public class Captain : MonoBehaviour
     public void myTurnStart()
     {
         Debug.Log("Captain Turn");
+        FightController.aTurnActive = true;
+    }
+
+    public void myTurnEnd()
+    {
         myTurnNow = false;
     }
 }
