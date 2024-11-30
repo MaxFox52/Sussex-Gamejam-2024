@@ -17,7 +17,12 @@ public class FightController : MonoBehaviour
 
     public int attackTarget;
 
+    public int nextAttackAttackDamage;
+
     public Captain CaptainScr;
+    public Engineer EngineerScr;
+    public HR HRScr;
+    public Survivor SurvivorScr;
     public Gleeble Gleeble1;
     public Gleeble Gleeble2;
     public Gleeble Gleeble3;
@@ -25,6 +30,9 @@ public class FightController : MonoBehaviour
     public Gleeble Gleeble5;
 
     public GameObject CaptainAttackButton;
+    public GameObject EngineerAttackButton;
+    public GameObject HRAttackButton;
+    public GameObject SurvivorAttackButton;
     public GameObject Gleeble1AttackButton;
     public GameObject Gleeble2AttackButton;
     public GameObject Gleeble3AttackButton;
@@ -40,6 +48,27 @@ public class FightController : MonoBehaviour
             CaptainScr = Captain.GetComponent<Captain>();
             CaptainAttackButton = GameObject.Find("CaptainAttack");
             CaptainAttackButton.SetActive(false);
+            numberOfAllies++;
+        }
+        if (Engineer.GetComponent("Engineer") != null)
+        {
+            EngineerScr = Engineer.GetComponent<Engineer>();
+            EngineerAttackButton = GameObject.Find("EngineerAttack");
+            EngineerAttackButton.SetActive(false);
+            numberOfAllies++;
+        }
+        if (HR.GetComponent("HR") != null)
+        {
+            HRScr = HR.GetComponent<HR>();
+            HRAttackButton = GameObject.Find("HRAttack");
+            HRAttackButton.SetActive(false);
+            numberOfAllies++;
+        }
+        if (Survivor.GetComponent("Survivor") != null)
+        {
+            SurvivorScr = Survivor.GetComponent<Survivor>();
+            SurvivorAttackButton = GameObject.Find("SurvivorAttack");
+            SurvivorAttackButton.SetActive(false);
             numberOfAllies++;
         }
 
@@ -107,6 +136,11 @@ public class FightController : MonoBehaviour
 
     void Update()
     {
+        if (CaptainScr.captainHealth <= 0)
+        {
+            Debug.Log("Unlucky You Lose.");
+        }
+
         if (Gleeble1 != null)
         {
             if (Gleeble1.gleebleHealth <= 0)
@@ -152,24 +186,158 @@ public class FightController : MonoBehaviour
                 numberOfEnemies--;
             }
         }
+
+        if (numberOfEnemies == 0)
+        {
+            Debug.Log("You Win");
+        }
     }
 
     public void CaptainAttack()
     {
         CaptainScr.myTurnEnd();
-        Debug.Log("Captain attacks for " + CaptainScr.captainAttack);
+        if (Gleeble1 != null)
+        {
+            Gleeble1AttackButton.gameObject.SetActive(true);
+        }
+        if (Gleeble2 != null)
+        {
+            Gleeble2AttackButton.gameObject.SetActive(true);
+        }
+        if (Gleeble3 != null)
+        {
+            Gleeble3AttackButton.gameObject.SetActive(true);
+        }
+        if (Gleeble4 != null)
+        {
+            Gleeble4AttackButton.gameObject.SetActive(true);
+        }
+        if (Gleeble5 != null)
+        {
+            Gleeble5AttackButton.gameObject.SetActive(true);
+        }
+        nextAttackAttackDamage = CaptainScr.captainAttack;
+    }
+
+    public void Target1()
+    {
+        if (Gleeble1 != null)
+        {
+            Gleeble1.gleebleHealth = Gleeble1.gleebleHealth - nextAttackAttackDamage;
+        }
+        Debug.Log("Attacks for " + nextAttackAttackDamage);
+        nextAttackAttackDamage = 0;
+        Gleeble1AttackButton.gameObject.SetActive(false);
+        Gleeble2AttackButton.gameObject.SetActive(false);
+        Gleeble3AttackButton.gameObject.SetActive(false);
+        Gleeble4AttackButton.gameObject.SetActive(false);
+        Gleeble5AttackButton.gameObject.SetActive(false);
         aTurnActive = false;
     }
 
-    public void chooseTarget()
+    public void Target2()
     {
+        if (Gleeble2 != null)
+        {
+            Gleeble2.gleebleHealth = Gleeble2.gleebleHealth - nextAttackAttackDamage;
+        }
+        Debug.Log("Attacks for " + nextAttackAttackDamage);
+        nextAttackAttackDamage = 0;
+        Gleeble1AttackButton.gameObject.SetActive(false);
+        Gleeble2AttackButton.gameObject.SetActive(false);
+        Gleeble3AttackButton.gameObject.SetActive(false);
+        Gleeble4AttackButton.gameObject.SetActive(false);
+        Gleeble5AttackButton.gameObject.SetActive(false);
+        aTurnActive = false;
+    }
 
+    public void Target3()
+    {
+        if (Gleeble3 != null)
+        {
+            Gleeble3.gleebleHealth = Gleeble3.gleebleHealth - nextAttackAttackDamage;
+        }
+        Debug.Log("Attacks for " + nextAttackAttackDamage);
+        nextAttackAttackDamage = 0;
+        Gleeble1AttackButton.gameObject.SetActive(false);
+        Gleeble2AttackButton.gameObject.SetActive(false);
+        Gleeble3AttackButton.gameObject.SetActive(false);
+        Gleeble4AttackButton.gameObject.SetActive(false);
+        Gleeble5AttackButton.gameObject.SetActive(false);
+        aTurnActive = false;
+    }
+
+    public void Target4()
+    {
+        if (Gleeble4 != null)
+        {
+            Gleeble4.gleebleHealth = Gleeble4.gleebleHealth - nextAttackAttackDamage;
+        }
+        Debug.Log("Attacks for " + nextAttackAttackDamage);
+        nextAttackAttackDamage = 0;
+        Gleeble1AttackButton.gameObject.SetActive(false);
+        Gleeble2AttackButton.gameObject.SetActive(false);
+        Gleeble3AttackButton.gameObject.SetActive(false);
+        Gleeble4AttackButton.gameObject.SetActive(false);
+        Gleeble5AttackButton.gameObject.SetActive(false);
+        aTurnActive = false;
+    }
+
+    public void Target5()
+    {
+        if (Gleeble5 != null)
+        {
+            Gleeble5.gleebleHealth = Gleeble5.gleebleHealth - nextAttackAttackDamage;
+        }
+        Debug.Log("Attacks for " + nextAttackAttackDamage);
+        nextAttackAttackDamage = 0;
+        Gleeble1AttackButton.gameObject.SetActive(false);
+        Gleeble2AttackButton.gameObject.SetActive(false);
+        Gleeble3AttackButton.gameObject.SetActive(false);
+        Gleeble4AttackButton.gameObject.SetActive(false);
+        Gleeble5AttackButton.gameObject.SetActive(false);
+        aTurnActive = false;
     }
 
     public void Gleeble1Attack()
     {
         Gleeble1.gleebleAttack = Random.Range(15, 26);
-        attackTarget = Random.Range(1, numberOfAllies);
+        attackTarget = Random.Range(1, numberOfAllies + 1);
+        if (attackTarget == 1)
+        {
+            Debug.Log("Captain would hurt");
+            CaptainScr.captainHealth = CaptainScr.captainHealth - Gleeble1.gleebleAttack;
+        }
+        if (attackTarget == 2)
+        {
+            if (EngineerScr != null)
+            {
+                Debug.Log("Engineer would hurt");
+            }
+            else if (HRScr != null)
+            {
+                Debug.Log("HR would hurt");
+            }
+            else
+            {
+                Debug.Log("Survivor would hurt");
+            }
+        }
+        if (attackTarget == 3)
+        {
+            if (HRScr != null)
+            {
+                Debug.Log("HR would hurt");
+            }
+            else
+            {
+                Debug.Log("Survivor would hurt");
+            }
+        }
+        if (attackTarget == 4)
+        {
+            Debug.Log("Survivor would hurt");
+        }
         Gleeble1.myTurnEnd();
         Debug.Log("Gleeble attacks for " + Gleeble1.gleebleAttack);
         aTurnActive = false;
@@ -178,7 +346,42 @@ public class FightController : MonoBehaviour
     public void Gleeble2Attack()
     {
         Gleeble2.gleebleAttack = Random.Range(15, 26);
-        attackTarget = Random.Range(1, numberOfAllies);
+        attackTarget = Random.Range(1, numberOfAllies + 1);
+        if (attackTarget == 1)
+        {
+            Debug.Log("Captain would hurt");
+            CaptainScr.captainHealth = CaptainScr.captainHealth - Gleeble1.gleebleAttack;
+        }
+        if (attackTarget == 2)
+        {
+            if (EngineerScr != null)
+            {
+                Debug.Log("Engineer would hurt");
+            }
+            else if (HRScr != null)
+            {
+                Debug.Log("HR would hurt");
+            }
+            else
+            {
+                Debug.Log("Survivor would hurt");
+            }
+        }
+        if (attackTarget == 3)
+        {
+            if (HRScr != null)
+            {
+                Debug.Log("HR would hurt");
+            }
+            else
+            {
+                Debug.Log("Survivor would hurt");
+            }
+        }
+        if (attackTarget == 4)
+        {
+            Debug.Log("Survivor would hurt");
+        }
         Gleeble2.myTurnEnd();
         Debug.Log("Gleeble attacks for " + Gleeble2.gleebleAttack);
         aTurnActive = false;
@@ -187,7 +390,42 @@ public class FightController : MonoBehaviour
     public void Gleeble3Attack()
     {
         Gleeble3.gleebleAttack = Random.Range(15, 26);
-        attackTarget = Random.Range(1, numberOfAllies);
+        attackTarget = Random.Range(1, numberOfAllies + 1);
+        if (attackTarget == 1)
+        {
+            Debug.Log("Captain would hurt");
+            CaptainScr.captainHealth = CaptainScr.captainHealth - Gleeble1.gleebleAttack;
+        }
+        if (attackTarget == 2)
+        {
+            if (EngineerScr != null)
+            {
+                Debug.Log("Engineer would hurt");
+            }
+            else if (HRScr != null)
+            {
+                Debug.Log("HR would hurt");
+            }
+            else
+            {
+                Debug.Log("Survivor would hurt");
+            }
+        }
+        if (attackTarget == 3)
+        {
+            if (HRScr != null)
+            {
+                Debug.Log("HR would hurt");
+            }
+            else
+            {
+                Debug.Log("Survivor would hurt");
+            }
+        }
+        if (attackTarget == 4)
+        {
+            Debug.Log("Survivor would hurt");
+        }
         Gleeble3.myTurnEnd();
         Debug.Log("Gleeble attacks for " + Gleeble3.gleebleAttack);
         aTurnActive = false;
@@ -196,7 +434,42 @@ public class FightController : MonoBehaviour
     public void Gleeble4Attack()
     {
         Gleeble4.gleebleAttack = Random.Range(15, 26);
-        attackTarget = Random.Range(1, numberOfAllies);
+        attackTarget = Random.Range(1, numberOfAllies + 1);
+        if (attackTarget == 1)
+        {
+            Debug.Log("Captain would hurt");
+            CaptainScr.captainHealth = CaptainScr.captainHealth - Gleeble1.gleebleAttack;
+        }
+        if (attackTarget == 2)
+        {
+            if (EngineerScr != null)
+            {
+                Debug.Log("Engineer would hurt");
+            }
+            else if (HRScr != null)
+            {
+                Debug.Log("HR would hurt");
+            }
+            else
+            {
+                Debug.Log("Survivor would hurt");
+            }
+        }
+        if (attackTarget == 3)
+        {
+            if (HRScr != null)
+            {
+                Debug.Log("HR would hurt");
+            }
+            else
+            {
+                Debug.Log("Survivor would hurt");
+            }
+        }
+        if (attackTarget == 4)
+        {
+            Debug.Log("Survivor would hurt");
+        }
         Gleeble4.myTurnEnd();
         Debug.Log("Gleeble attacks for " + Gleeble4.gleebleAttack);
         aTurnActive = false;
@@ -205,7 +478,42 @@ public class FightController : MonoBehaviour
     public void Gleeble5Attack()
     {
         Gleeble5.gleebleAttack = Random.Range(15, 26);
-        attackTarget = Random.Range(1, numberOfAllies);
+        attackTarget = Random.Range(1, numberOfAllies + 1);
+        if (attackTarget == 1)
+        {
+            Debug.Log("Captain would hurt");
+            CaptainScr.captainHealth = CaptainScr.captainHealth - Gleeble1.gleebleAttack;
+        }
+        if (attackTarget == 2)
+        {
+            if (EngineerScr != null)
+            {
+                Debug.Log("Engineer would hurt");
+            }
+            else if (HRScr != null)
+            {
+                Debug.Log("HR would hurt");
+            }
+            else
+            {
+                Debug.Log("Survivor would hurt");
+            }
+        }
+        if (attackTarget == 3)
+        {
+            if (HRScr != null)
+            {
+                Debug.Log("HR would hurt");
+            }
+            else
+            {
+                Debug.Log("Survivor would hurt");
+            }
+        }
+        if (attackTarget == 4)
+        {
+            Debug.Log("Survivor would hurt");
+        }
         Gleeble5.myTurnEnd();
         Debug.Log("Gleeble attacks for " + Gleeble5.gleebleAttack);
         aTurnActive = false;

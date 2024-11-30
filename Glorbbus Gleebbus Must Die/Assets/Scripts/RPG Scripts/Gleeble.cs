@@ -15,6 +15,8 @@ public class Gleeble : MonoBehaviour
     {
         gleebleHealth = Random.Range(50, 76);
         gleebleSpeed = Random.Range(100, 151);
+
+        FightController = GameObject.Find("FightController").GetComponent<FightController>();
     }
 
     void Update()
@@ -40,51 +42,31 @@ public class Gleeble : MonoBehaviour
     public void myTurnStart()
     {
         Debug.Log("Gleeble Turn");
+        FightController.aTurnActive = true;
         if (gameObject.name == "Enemy1")
         {
-            FightController.Gleeble1AttackButton.SetActive(true);
+            FightController.Gleeble1Attack();
         }
         if (gameObject.name == "Enemy2")
         {
-            FightController.Gleeble2AttackButton.SetActive(true);
+            FightController.Gleeble2Attack();
         }
         if (gameObject.name == "Enemy3")
         {
-            FightController.Gleeble3AttackButton.SetActive(true);
+            FightController.Gleeble3Attack();
         }
         if (gameObject.name == "Enemy4")
         {
-            FightController.Gleeble4AttackButton.SetActive(true);
+            FightController.Gleeble4Attack();
         }
         if (gameObject.name == "Enemy5")
         {
-            FightController.Gleeble5AttackButton.SetActive(true);
+            FightController.Gleeble5Attack();
         }
-        FightController.aTurnActive = true;
     }
 
     public void myTurnEnd()
     {
-        if (gameObject.name == "Enemy1")
-        {
-            FightController.Gleeble1AttackButton.SetActive(false);
-        }
-        if (gameObject.name == "Enemy2")
-        {
-            FightController.Gleeble2AttackButton.SetActive(false);
-        }
-        if (gameObject.name == "Enemy3")
-        {
-            FightController.Gleeble3AttackButton.SetActive(false);
-        }
-        if (gameObject.name == "Enemy4")
-        {
-            FightController.Gleeble4AttackButton.SetActive(false);
-        }
-        if (gameObject.name == "Enemy5")
-        {
-            FightController.Gleeble5AttackButton.SetActive(false);
-        }
         myTurnNow = false;
     }
 }
