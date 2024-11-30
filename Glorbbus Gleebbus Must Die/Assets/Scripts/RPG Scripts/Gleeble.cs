@@ -40,13 +40,51 @@ public class Gleeble : MonoBehaviour
     public void myTurnStart()
     {
         Debug.Log("Gleeble Turn");
-        FightController.GleebleAttackButton.SetActive(true);
+        if (gameObject.name == "Enemy1")
+        {
+            FightController.Gleeble1AttackButton.SetActive(true);
+        }
+        if (gameObject.name == "Enemy2")
+        {
+            FightController.Gleeble2AttackButton.SetActive(true);
+        }
+        if (gameObject.name == "Enemy3")
+        {
+            FightController.Gleeble3AttackButton.SetActive(true);
+        }
+        if (gameObject.name == "Enemy4")
+        {
+            FightController.Gleeble4AttackButton.SetActive(true);
+        }
+        if (gameObject.name == "Enemy5")
+        {
+            FightController.Gleeble5AttackButton.SetActive(true);
+        }
         FightController.aTurnActive = true;
     }
 
     public void myTurnEnd()
     {
-        FightController.GleebleAttackButton.SetActive(false);
+        if (gameObject.name == "Enemy1")
+        {
+            FightController.Gleeble1AttackButton.SetActive(false);
+        }
+        if (gameObject.name == "Enemy2")
+        {
+            FightController.Gleeble2AttackButton.SetActive(false);
+        }
+        if (gameObject.name == "Enemy3")
+        {
+            FightController.Gleeble3AttackButton.SetActive(false);
+        }
+        if (gameObject.name == "Enemy4")
+        {
+            FightController.Gleeble4AttackButton.SetActive(false);
+        }
+        if (gameObject.name == "Enemy5")
+        {
+            FightController.Gleeble5AttackButton.SetActive(false);
+        }
         myTurnNow = false;
     }
 }
