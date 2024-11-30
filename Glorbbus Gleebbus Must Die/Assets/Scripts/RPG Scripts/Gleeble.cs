@@ -29,14 +29,11 @@ public class Gleeble : MonoBehaviour
                 }
                 else
                 {
-                    turnCountUp = 0;
+                    turnCountUp = turnCountUp - 5000;
                     myTurnNow = true;
+                    myTurnStart();
                 }
             }
-        }
-        else
-        {
-            myTurnStart();
         }
     }
 
