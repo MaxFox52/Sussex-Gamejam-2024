@@ -17,7 +17,7 @@ public class FightController : MonoBehaviour
         
     }
 
-    public GleebleAttack()
+    public void GleebleAttack()
     {
         Gleeble.gleebleAttack = Random.Range(15, 26);
         Debug.Log("Gleeble attacks for " + Gleeble.gleebleAttack);
@@ -25,7 +25,7 @@ public class FightController : MonoBehaviour
         aTurnActive = false;
     }
 
-    public CaptainAttack()
+    public void CaptainAttack()
     {
         Captain.myTurnEnd();
         Debug.Log("Captain attacks for " + Captain.captainAttack);
