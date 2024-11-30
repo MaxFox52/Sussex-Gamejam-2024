@@ -5,11 +5,15 @@ public class FightController : MonoBehaviour
     public Captain Captain;
     public Gleeble Gleeble;
 
+    public GameObject CaptainAttackButton;
+    public GameObject GleebleAttackButton;
+
     public bool aTurnActive = false;
 
     void Start()
     {
-        
+        CaptainAttackButton.SetActive(false);
+        GleebleAttackButton.SetActive(false);
     }
 
     void Update()

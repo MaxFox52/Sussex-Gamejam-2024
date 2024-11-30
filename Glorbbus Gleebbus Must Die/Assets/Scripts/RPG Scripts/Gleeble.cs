@@ -40,11 +40,13 @@ public class Gleeble : MonoBehaviour
     public void myTurnStart()
     {
         Debug.Log("Gleeble Turn");
+        FightController.GleebleAttackButton.SetActive(true);
         FightController.aTurnActive = true;
     }
 
     public void myTurnEnd()
     {
+        FightController.GleebleAttackButton.SetActive(false);
         myTurnNow = false;
     }
 }

@@ -39,11 +39,13 @@ public class Captain : MonoBehaviour
     public void myTurnStart()
     {
         Debug.Log("Captain Turn");
+        FightController.CaptainAttackButton.SetActive(true);
         FightController.aTurnActive = true;
     }
 
     public void myTurnEnd()
     {
+        FightController.CaptainAttackButton.SetActive(true);
         myTurnNow = false;
     }
 }
