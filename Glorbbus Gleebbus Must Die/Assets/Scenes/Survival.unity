@@ -1297,7 +1297,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1565179025}
         m_TargetAssemblyTypeName: FightController, Assembly-CSharp
-        m_MethodName: CaptainAttack
+        m_MethodName: EngineerAttack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1781,7 +1781,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1565179025}
         m_TargetAssemblyTypeName: FightController, Assembly-CSharp
-        m_MethodName: CaptainAttack
+        m_MethodName: SurvivorAttack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1964,7 +1964,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1575000217}
-  - component: {fileID: 1575000216}
+  - component: {fileID: 1575000218}
   m_Layer: 0
   m_Name: Captain
   m_TagString: Untagged
@@ -1972,24 +1972,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1575000216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1575000215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3997690fb89a1b74296df98611cb9781, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FightController: {fileID: 1565179025}
-  captainAttack: 25
-  captainHealth: 150
-  captainSpeed: 120
-  turnCountUp: 0
-  myTurnNow: 0
 --- !u!4 &1575000217
 Transform:
   m_ObjectHideFlags: 0
@@ -2005,6 +1987,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1575000218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575000215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3997690fb89a1b74296df98611cb9781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FightController: {fileID: 0}
+  captainAttack: 25
+  captainHealth: 150
+  captainSpeed: 120
+  turnCountUp: 0
+  myTurnNow: 0
 --- !u!1 &1586294737
 GameObject:
   m_ObjectHideFlags: 0
@@ -2226,7 +2226,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1565179025}
         m_TargetAssemblyTypeName: FightController, Assembly-CSharp
-        m_MethodName: CaptainAttack
+        m_MethodName: HRAttack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2640,6 +2640,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be71de4924f5a974680b3c9384aada20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FightController: {fileID: 0}
+  HRAttack: 25
+  HRHealth: 150
+  HRSpeed: 120
+  turnCountUp: 0
+  myTurnNow: 0
 --- !u!1 &1872602425
 GameObject:
   m_ObjectHideFlags: 0
@@ -3057,7 +3063,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2003763084}
-  - component: {fileID: 2003763085}
   m_Layer: 0
   m_Name: Survivor
   m_TagString: Untagged
@@ -3080,18 +3085,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2003763085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2003763083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e64dd6c1a54014a40a0ca80e44ee5ae3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2121234350
 GameObject:
   m_ObjectHideFlags: 0

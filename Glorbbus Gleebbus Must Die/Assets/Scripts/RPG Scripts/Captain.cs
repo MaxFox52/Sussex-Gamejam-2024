@@ -13,7 +13,7 @@ public class Captain : MonoBehaviour
 
     void Start()
     {
-
+        FightController = GameObject.Find("FightController").GetComponent<FightController>();
     }
 
     void Update()
@@ -45,7 +45,6 @@ public class Captain : MonoBehaviour
 
     public void myTurnEnd()
     {
-        FightController.CaptainAttackButton.SetActive(false);
         myTurnNow = false;
     }
 }

@@ -57,6 +57,11 @@ public class FightController : MonoBehaviour
             EngineerAttackButton.SetActive(false);
             numberOfAllies++;
         }
+        else
+        {
+            EngineerAttackButton = GameObject.Find("EngineerAttack");
+            EngineerAttackButton.SetActive(false);
+        }
         if (HR.GetComponent("HR") != null)
         {
             HRScr = HR.GetComponent<HR>();
@@ -64,12 +69,22 @@ public class FightController : MonoBehaviour
             HRAttackButton.SetActive(false);
             numberOfAllies++;
         }
+        else
+        {
+            HRAttackButton = GameObject.Find("HRAttack");
+            HRAttackButton.SetActive(false);
+        }
         if (Survivor.GetComponent("Survivor") != null)
         {
             SurvivorScr = Survivor.GetComponent<Survivor>();
             SurvivorAttackButton = GameObject.Find("SurvivorAttack");
             SurvivorAttackButton.SetActive(false);
             numberOfAllies++;
+        }
+        else
+        {
+            SurvivorAttackButton = GameObject.Find("SurvivorAttack");
+            SurvivorAttackButton.SetActive(false);
         }
 
         if (enemyOne.GetComponent("Gleeble") != null)
@@ -139,6 +154,34 @@ public class FightController : MonoBehaviour
         if (CaptainScr.captainHealth <= 0)
         {
             Debug.Log("Unlucky You Lose.");
+        }
+
+        if (EngineerScr != null)
+        {
+            if (EngineerScr.engineerHealth <= 0)
+            {
+                Debug.Log("Unlucky Engineer");
+                Destroy(EngineerScr);
+                numberOfAllies--;
+            }
+        }
+        if (HRScr != null)
+        {
+            if (HRScr.HRHealth <= 0)
+            {
+                Debug.Log("Unlucky HR");
+                Destroy(HRScr);
+                numberOfAllies--;
+            }
+        }
+        if (SurvivorScr != null)
+        {
+            if (SurvivorScr.survivorHealth <= 0)
+            {
+                Debug.Log("Unlucky Survivor");
+                Destroy(SurvivorScr);
+                numberOfAllies--;
+            }
         }
 
         if (Gleeble1 != null)
@@ -216,7 +259,89 @@ public class FightController : MonoBehaviour
         {
             Gleeble5AttackButton.gameObject.SetActive(true);
         }
+        CaptainAttackButton.SetActive(false);
         nextAttackAttackDamage = CaptainScr.captainAttack;
+    }
+
+    public void EngineerAttack()
+    {
+        EngineerScr.myTurnEnd();
+        if (Gleeble1 != null)
+        {
+            Gleeble1AttackButton.gameObject.SetActive(true);
+        }
+        if (Gleeble2 != null)
+        {
+            Gleeble2AttackButton.gameObject.SetActive(true);
+        }
+        if (Gleeble3 != null)
+        {
+            Gleeble3AttackButton.gameObject.SetActive(true);
+        }
+        if (Gleeble4 != null)
+        {
+            Gleeble4AttackButton.gameObject.SetActive(true);
+        }
+        if (Gleeble5 != null)
+        {
+            Gleeble5AttackButton.gameObject.SetActive(true);
+        }
+        EngineerAttackButton.SetActive(false);
+        nextAttackAttackDamage = EngineerScr.engineerAttack;
+    }
+
+    public void HRAttack()
+    {
+        HRScr.myTurnEnd();
+        if (Gleeble1 != null)
+        {
+            Gleeble1AttackButton.gameObject.SetActive(true);
+        }
+        if (Gleeble2 != null)
+        {
+            Gleeble2AttackButton.gameObject.SetActive(true);
+        }
+        if (Gleeble3 != null)
+        {
+            Gleeble3AttackButton.gameObject.SetActive(true);
+        }
+        if (Gleeble4 != null)
+        {
+            Gleeble4AttackButton.gameObject.SetActive(true);
+        }
+        if (Gleeble5 != null)
+        {
+            Gleeble5AttackButton.gameObject.SetActive(true);
+        }
+        HRAttackButton.SetActive(false);
+        nextAttackAttackDamage = HRScr.HRAttack;
+    }
+
+    public void SurvivorAttack()
+    {
+        SurvivorScr.myTurnEnd();
+        if (Gleeble1 != null)
+        {
+            Gleeble1AttackButton.gameObject.SetActive(true);
+        }
+        if (Gleeble2 != null)
+        {
+            Gleeble2AttackButton.gameObject.SetActive(true);
+        }
+        if (Gleeble3 != null)
+        {
+            Gleeble3AttackButton.gameObject.SetActive(true);
+        }
+        if (Gleeble4 != null)
+        {
+            Gleeble4AttackButton.gameObject.SetActive(true);
+        }
+        if (Gleeble5 != null)
+        {
+            Gleeble5AttackButton.gameObject.SetActive(true);
+        }
+        SurvivorAttackButton.SetActive(false);
+        nextAttackAttackDamage = SurvivorScr.survivorAttack;
     }
 
     public void Target1()
@@ -313,14 +438,17 @@ public class FightController : MonoBehaviour
             if (EngineerScr != null)
             {
                 Debug.Log("Engineer would hurt");
+                EngineerScr.engineerHealth = EngineerScr.engineerHealth - Gleeble1.gleebleAttack;
             }
             else if (HRScr != null)
             {
                 Debug.Log("HR would hurt");
+                HRScr.HRHealth = HRScr.HRHealth - Gleeble1.gleebleAttack;
             }
             else
             {
                 Debug.Log("Survivor would hurt");
+                SurvivorScr.survivorHealth = survivorScr.survivorHealth - Gleeble1.gleebleAttack;
             }
         }
         if (attackTarget == 3)
@@ -328,15 +456,18 @@ public class FightController : MonoBehaviour
             if (HRScr != null)
             {
                 Debug.Log("HR would hurt");
+                HRScr.HRHealth = HRScr.HRHealth - Gleeble1.gleebleAttack;
             }
             else
             {
                 Debug.Log("Survivor would hurt");
+                SurvivorScr.survivorHealth = SurvivorScr.survivorHealth - Gleeble1.gleebleAttack;
             }
         }
         if (attackTarget == 4)
         {
             Debug.Log("Survivor would hurt");
+            SurvivorScr.survivorHealth = SurvivorScr.survivorHealth - Gleeble1.gleebleAttack;
         }
         Gleeble1.myTurnEnd();
         Debug.Log("Gleeble attacks for " + Gleeble1.gleebleAttack);
