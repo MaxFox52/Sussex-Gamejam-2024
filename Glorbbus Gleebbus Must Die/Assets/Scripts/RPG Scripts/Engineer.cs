@@ -4,15 +4,17 @@ public class Engineer : MonoBehaviour
 {
     public FightController FightController;
 
-    public int engineerAttack = 25;
-    public int engineerHealth = 150;
-    public int engineerSpeed = 120;
+    public int engineerAttack;
+    public int engineerHealth = 175;
+    public int engineerSpeed = 100;
 
     public int turnCountUp = 0;
     public bool myTurnNow = false;
 
     void Start()
     {
+        engineerAttack = Random.Range(15, 26);
+
         FightController = GameObject.Find("FightController").GetComponent<FightController>();
     }
 

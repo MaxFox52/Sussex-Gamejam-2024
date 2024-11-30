@@ -1354,6 +1354,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1262927448}
+  - component: {fileID: 1262927449}
   m_Layer: 0
   m_Name: Engineer
   m_TagString: Untagged
@@ -1376,6 +1377,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1262927449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262927447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a9280a0fd9b454293e619f17abbe90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FightController: {fileID: 0}
+  engineerAttack: 0
+  engineerHealth: 175
+  engineerSpeed: 100
+  turnCountUp: 0
+  myTurnNow: 0
 --- !u!1 &1265075048
 GameObject:
   m_ObjectHideFlags: 0
@@ -2000,7 +2019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FightController: {fileID: 0}
-  captainAttack: 25
+  captainAttack: 0
   captainHealth: 150
   captainSpeed: 120
   turnCountUp: 0
@@ -2641,9 +2660,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FightController: {fileID: 0}
-  HRAttack: 25
-  HRHealth: 150
-  HRSpeed: 120
+  HRAttack: 0
+  HRHealth: 90
+  HRSpeed: 140
   turnCountUp: 0
   myTurnNow: 0
 --- !u!1 &1872602425
@@ -3063,6 +3082,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2003763084}
+  - component: {fileID: 2003763085}
   m_Layer: 0
   m_Name: Survivor
   m_TagString: Untagged
@@ -3085,6 +3105,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2003763085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003763083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e64dd6c1a54014a40a0ca80e44ee5ae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FightController: {fileID: 0}
+  survivorAttack: 0
+  survivorHealth: 125
+  survivorSpeed: 130
+  turnCountUp: 0
+  myTurnNow: 0
 --- !u!1 &2121234350
 GameObject:
   m_ObjectHideFlags: 0

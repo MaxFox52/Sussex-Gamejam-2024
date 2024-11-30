@@ -4,15 +4,17 @@ public class HR : MonoBehaviour
 {
     public FightController FightController;
 
-    public int HRAttack = 25;
-    public int HRHealth = 150;
-    public int HRSpeed = 120;
+    public int HRAttack;
+    public int HRHealth = 90;
+    public int HRSpeed = 140;
 
     public int turnCountUp = 0;
     public bool myTurnNow = false;
 
     void Start()
     {
+        HRAttack = Random.Range(10, 21);
+
         FightController = GameObject.Find("FightController").GetComponent<FightController>();
     }
 

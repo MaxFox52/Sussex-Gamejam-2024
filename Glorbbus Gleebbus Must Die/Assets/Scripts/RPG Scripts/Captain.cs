@@ -4,7 +4,7 @@ public class Captain : MonoBehaviour
 {
     public FightController FightController;
 
-    public int captainAttack = 25;
+    public int captainAttack;
     public int captainHealth = 150;
     public int captainSpeed = 120;
 
@@ -13,6 +13,8 @@ public class Captain : MonoBehaviour
 
     void Start()
     {
+        captainAttack = Random.Range(20, 31);
+
         FightController = GameObject.Find("FightController").GetComponent<FightController>();
     }
 
