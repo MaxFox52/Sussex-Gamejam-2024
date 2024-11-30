@@ -448,7 +448,7 @@ public class FightController : MonoBehaviour
             else
             {
                 Debug.Log("Survivor would hurt");
-                SurvivorScr.survivorHealth = survivorScr.survivorHealth - Gleeble1.gleebleAttack;
+                SurvivorScr.survivorHealth = SurvivorScr.survivorHealth - Gleeble1.gleebleAttack;
             }
         }
         if (attackTarget == 3)
@@ -481,21 +481,24 @@ public class FightController : MonoBehaviour
         if (attackTarget == 1)
         {
             Debug.Log("Captain would hurt");
-            CaptainScr.captainHealth = CaptainScr.captainHealth - Gleeble1.gleebleAttack;
+            CaptainScr.captainHealth = CaptainScr.captainHealth - Gleeble2.gleebleAttack;
         }
         if (attackTarget == 2)
         {
             if (EngineerScr != null)
             {
                 Debug.Log("Engineer would hurt");
+                EngineerScr.engineerHealth = EngineerScr.engineerHealth - Gleeble2.gleebleAttack;
             }
             else if (HRScr != null)
             {
                 Debug.Log("HR would hurt");
+                HRScr.HRHealth = HRScr.HRHealth - Gleeble2.gleebleAttack;
             }
             else
             {
                 Debug.Log("Survivor would hurt");
+                SurvivorScr.survivorHealth = SurvivorScr.survivorHealth - Gleeble2.gleebleAttack;
             }
         }
         if (attackTarget == 3)
@@ -503,15 +506,18 @@ public class FightController : MonoBehaviour
             if (HRScr != null)
             {
                 Debug.Log("HR would hurt");
+                HRScr.HRHealth = HRScr.HRHealth - Gleeble2.gleebleAttack;
             }
             else
             {
                 Debug.Log("Survivor would hurt");
+                SurvivorScr.survivorHealth = SurvivorScr.survivorHealth - Gleeble2.gleebleAttack;
             }
         }
         if (attackTarget == 4)
         {
             Debug.Log("Survivor would hurt");
+            SurvivorScr.survivorHealth = SurvivorScr.survivorHealth - Gleeble2.gleebleAttack;
         }
         Gleeble2.myTurnEnd();
         Debug.Log("Gleeble attacks for " + Gleeble2.gleebleAttack);
@@ -525,21 +531,24 @@ public class FightController : MonoBehaviour
         if (attackTarget == 1)
         {
             Debug.Log("Captain would hurt");
-            CaptainScr.captainHealth = CaptainScr.captainHealth - Gleeble1.gleebleAttack;
+            CaptainScr.captainHealth = CaptainScr.captainHealth - Gleeble3.gleebleAttack;
         }
         if (attackTarget == 2)
         {
             if (EngineerScr != null)
             {
                 Debug.Log("Engineer would hurt");
+                EngineerScr.engineerHealth = EngineerScr.engineerHealth - Gleeble3.gleebleAttack;
             }
             else if (HRScr != null)
             {
                 Debug.Log("HR would hurt");
+                HRScr.HRHealth = HRScr.HRHealth - Gleeble3.gleebleAttack;
             }
             else
             {
                 Debug.Log("Survivor would hurt");
+                SurvivorScr.survivorHealth = SurvivorScr.survivorHealth - Gleeble3.gleebleAttack;
             }
         }
         if (attackTarget == 3)
@@ -547,15 +556,18 @@ public class FightController : MonoBehaviour
             if (HRScr != null)
             {
                 Debug.Log("HR would hurt");
+                HRScr.HRHealth = HRScr.HRHealth - Gleeble3.gleebleAttack;
             }
             else
             {
                 Debug.Log("Survivor would hurt");
+                SurvivorScr.survivorHealth = SurvivorScr.survivorHealth - Gleeble3.gleebleAttack;
             }
         }
         if (attackTarget == 4)
         {
             Debug.Log("Survivor would hurt");
+            SurvivorScr.survivorHealth = SurvivorScr.survivorHealth - Gleeble3.gleebleAttack;
         }
         Gleeble3.myTurnEnd();
         Debug.Log("Gleeble attacks for " + Gleeble3.gleebleAttack);
@@ -569,21 +581,24 @@ public class FightController : MonoBehaviour
         if (attackTarget == 1)
         {
             Debug.Log("Captain would hurt");
-            CaptainScr.captainHealth = CaptainScr.captainHealth - Gleeble1.gleebleAttack;
+            CaptainScr.captainHealth = CaptainScr.captainHealth - Gleeble4.gleebleAttack;
         }
         if (attackTarget == 2)
         {
             if (EngineerScr != null)
             {
                 Debug.Log("Engineer would hurt");
+                EngineerScr.engineerHealth = EngineerScr.engineerHealth - Gleeble4.gleebleAttack;
             }
             else if (HRScr != null)
             {
                 Debug.Log("HR would hurt");
+                HRScr.HRHealth = HRScr.HRHealth - Gleeble4.gleebleAttack;
             }
             else
             {
                 Debug.Log("Survivor would hurt");
+                SurvivorScr.survivorHealth = SurvivorScr.survivorHealth - Gleeble4.gleebleAttack;
             }
         }
         if (attackTarget == 3)
@@ -591,15 +606,18 @@ public class FightController : MonoBehaviour
             if (HRScr != null)
             {
                 Debug.Log("HR would hurt");
+                HRScr.HRHealth = HRScr.HRHealth - Gleeble4.gleebleAttack;
             }
             else
             {
                 Debug.Log("Survivor would hurt");
+                SurvivorScr.survivorHealth = SurvivorScr.survivorHealth - Gleeble4.gleebleAttack;
             }
         }
         if (attackTarget == 4)
         {
             Debug.Log("Survivor would hurt");
+            SurvivorScr.survivorHealth = SurvivorScr.survivorHealth - Gleeble4.gleebleAttack;
         }
         Gleeble4.myTurnEnd();
         Debug.Log("Gleeble attacks for " + Gleeble4.gleebleAttack);
@@ -613,21 +631,24 @@ public class FightController : MonoBehaviour
         if (attackTarget == 1)
         {
             Debug.Log("Captain would hurt");
-            CaptainScr.captainHealth = CaptainScr.captainHealth - Gleeble1.gleebleAttack;
+            CaptainScr.captainHealth = CaptainScr.captainHealth - Gleeble5.gleebleAttack;
         }
         if (attackTarget == 2)
         {
             if (EngineerScr != null)
             {
                 Debug.Log("Engineer would hurt");
+                EngineerScr.engineerHealth = EngineerScr.engineerHealth - Gleeble5.gleebleAttack;
             }
             else if (HRScr != null)
             {
                 Debug.Log("HR would hurt");
+                HRScr.HRHealth = HRScr.HRHealth - Gleeble5.gleebleAttack;
             }
             else
             {
                 Debug.Log("Survivor would hurt");
+                SurvivorScr.survivorHealth = SurvivorScr.survivorHealth - Gleeble5.gleebleAttack;
             }
         }
         if (attackTarget == 3)
@@ -635,15 +656,18 @@ public class FightController : MonoBehaviour
             if (HRScr != null)
             {
                 Debug.Log("HR would hurt");
+                HRScr.HRHealth = HRScr.HRHealth - Gleeble5.gleebleAttack;
             }
             else
             {
                 Debug.Log("Survivor would hurt");
+                SurvivorScr.survivorHealth = SurvivorScr.survivorHealth - Gleeble5.gleebleAttack;
             }
         }
         if (attackTarget == 4)
         {
             Debug.Log("Survivor would hurt");
+            SurvivorScr.survivorHealth = SurvivorScr.survivorHealth - Gleeble5.gleebleAttack;
         }
         Gleeble5.myTurnEnd();
         Debug.Log("Gleeble attacks for " + Gleeble5.gleebleAttack);
