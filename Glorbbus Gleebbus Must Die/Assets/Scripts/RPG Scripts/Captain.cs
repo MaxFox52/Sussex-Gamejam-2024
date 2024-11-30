@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class Captain : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public int captainAttack;
+    public int captainHealth;
+    public int captainSpeed;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
