@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: 5613d5443284a2e4c9bc78ff7e029f62
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5553933242566167816
+    second: Glorbbus_Gleebbus_0
+  - first:
+      213: 9128749251938972453
+    second: Glorbbus_Gleebbus_1
+  - first:
+      213: -5477131573923078275
+    second: Glorbbus_Gleebbus_2
+  - first:
+      213: -1674189974826377464
+    second: Glorbbus_Gleebbus_3
+  - first:
+      213: -1587719467535246114
+    second: Glorbbus_Gleebbus_4
+  - first:
+      213: -6659832141035935055
+    second: Glorbbus_Gleebbus_5
+  - first:
+      213: -2812517446204449322
+    second: Glorbbus_Gleebbus_6
+  - first:
+      213: 5330935953110264297
+    second: Glorbbus_Gleebbus_7
+  - first:
+      213: 610041248660059915
+    second: Glorbbus_Gleebbus_8
+  - first:
+      213: 8374624812357585163
+    second: Glorbbus_Gleebbus_9
+  - first:
+      213: 8804523146404665801
+    second: Glorbbus_Gleebbus_10
+  - first:
+      213: -8068066001070947917
+    second: Glorbbus_Gleebbus_11
+  - first:
+      213: -2795725375829733918
+    second: Glorbbus_Gleebbus_12
+  - first:
+      213: 8981972633018615962
+    second: Glorbbus_Gleebbus_13
+  - first:
+      213: -813705947472107225
+    second: Glorbbus_Gleebbus_14
+  - first:
+      213: -2752347656048587739
+    second: Glorbbus_Gleebbus_15
+  - first:
+      213: -6789779448250548924
+    second: Glorbbus_Gleebbus_16
+  - first:
+      213: 5000761622442450615
+    second: Glorbbus_Gleebbus_17
+  - first:
+      213: 7192270666665712021
+    second: Glorbbus_Gleebbus_18
+  - first:
+      213: 4794511830363731349
+    second: Glorbbus_Gleebbus_19
+  - first:
+      213: 5183552856251530267
+    second: Glorbbus_Gleebbus_20
+  - first:
+      213: -3289378254352408920
+    second: Glorbbus_Gleebbus_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Glorbbus_Gleebbus_0
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 94
+        width: 1336
+        height: 3227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f23c9254277ce2b0800000000000000
+      internalID: -5553933242566167816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glorbbus_Gleebbus_1
+      rect:
+        serializedVersion: 2
+        x: 1833
+        y: 3111
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5237f651415dfae70800000000000000
+      internalID: 9128749251938972453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glorbbus_Gleebbus_2
+      rect:
+        serializedVersion: 2
+        x: 1803
+        y: 1867
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7f1d344ad15df3b0800000000000000
+      internalID: -5477131573923078275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glorbbus_Gleebbus_3
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 1844
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80f14ff861514c8e0800000000000000
+      internalID: -1674189974826377464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glorbbus_Gleebbus_4
+      rect:
+        serializedVersion: 2
+        x: 1797
+        y: 1825
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edcd69e6e8947f9e0800000000000000
+      internalID: -1587719467535246114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glorbbus_Gleebbus_5
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 1772
+        width: 23
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bae2d9f3f58393a0800000000000000
+      internalID: -6659832141035935055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glorbbus_Gleebbus_6
+      rect:
+        serializedVersion: 2
+        x: 1787
+        y: 1774
+        width: 15
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dd1566b84ee7f8d0800000000000000
+      internalID: -2812517446204449322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glorbbus_Gleebbus_7
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 1743
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e9ee7d310a4bf940800000000000000
+      internalID: 5330935953110264297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glorbbus_Gleebbus_8
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 1572
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b07f7b4984d477800800000000000000
+      internalID: 610041248660059915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glorbbus_Gleebbus_9
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 1575
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b090fbb65e4a83470800000000000000
+      internalID: 8374624812357585163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glorbbus_Gleebbus_10
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1552
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c9972e3723ff2a70800000000000000
+      internalID: 8804523146404665801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glorbbus_Gleebbus_11
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 1542
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b182cde7b8780090800000000000000
+      internalID: -8068066001070947917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glorbbus_Gleebbus_12
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1492
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ed8f1445969339d0800000000000000
+      internalID: -2795725375829733918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glorbbus_Gleebbus_13
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 1479
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a98ca5d658066ac70800000000000000
+      internalID: 8981972633018615962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glorbbus_Gleebbus_14
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 117
+        width: 31
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7296d4180c225b4f0800000000000000
+      internalID: -813705947472107225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glorbbus_Gleebbus_15
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 114
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52c48dea362bdc9d0800000000000000
+      internalID: -2752347656048587739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glorbbus_Gleebbus_16
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 105
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44d37cbc09bd5c1a0800000000000000
+      internalID: -6789779448250548924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glorbbus_Gleebbus_17
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 94
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7be96105336466540800000000000000
+      internalID: 5000761622442450615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glorbbus_Gleebbus_18
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 84
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5995217a01410d360800000000000000
+      internalID: 7192270666665712021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glorbbus_Gleebbus_19
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 68
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 595fc387b17898240800000000000000
+      internalID: 4794511830363731349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glorbbus_Gleebbus_20
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 26
+        width: 42
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1c755febddafe740800000000000000
+      internalID: 5183552856251530267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glorbbus_Gleebbus_21
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 77
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ae1e61d7e7c952d0800000000000000
+      internalID: -3289378254352408920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Glorbbus_Gleebbus_0: -5553933242566167816
+      Glorbbus_Gleebbus_1: 9128749251938972453
+      Glorbbus_Gleebbus_10: 8804523146404665801
+      Glorbbus_Gleebbus_11: -8068066001070947917
+      Glorbbus_Gleebbus_12: -2795725375829733918
+      Glorbbus_Gleebbus_13: 8981972633018615962
+      Glorbbus_Gleebbus_14: -813705947472107225
+      Glorbbus_Gleebbus_15: -2752347656048587739
+      Glorbbus_Gleebbus_16: -6789779448250548924
+      Glorbbus_Gleebbus_17: 5000761622442450615
+      Glorbbus_Gleebbus_18: 7192270666665712021
+      Glorbbus_Gleebbus_19: 4794511830363731349
+      Glorbbus_Gleebbus_2: -5477131573923078275
+      Glorbbus_Gleebbus_20: 5183552856251530267
+      Glorbbus_Gleebbus_21: -3289378254352408920
+      Glorbbus_Gleebbus_3: -1674189974826377464
+      Glorbbus_Gleebbus_4: -1587719467535246114
+      Glorbbus_Gleebbus_5: -6659832141035935055
+      Glorbbus_Gleebbus_6: -2812517446204449322
+      Glorbbus_Gleebbus_7: 5330935953110264297
+      Glorbbus_Gleebbus_8: 610041248660059915
+      Glorbbus_Gleebbus_9: 8374624812357585163
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

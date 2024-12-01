@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FightController : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class FightController : MonoBehaviour
     public Gleeble Gleeble3;
     public Gleeble Gleeble4;
     public Gleeble Gleeble5;
+    public GlorbbusGleebbus GGScr;
 
     public GameObject CaptainAttackButton;
     public GameObject EngineerAttackButton;
@@ -48,12 +50,19 @@ public class FightController : MonoBehaviour
     public GameObject Gleeble3Sprite;
     public GameObject Gleeble4Sprite;
     public GameObject Gleeble5Sprite;
+    public GameObject GGSprite;
 
+    public GameObject text;
+
+    public GameObject deathScreen;
 
     public bool aTurnActive = false;
 
     void Start()
     {
+        deathScreen.SetActive(false);
+        text.SetActive(false);
+
         // setting up captain
         if (Captain.GetComponent("Captain") != null)
         {
@@ -192,13 +201,36 @@ public class FightController : MonoBehaviour
         }
         Gleeble5AttackButton = GameObject.Find("GleebleAttack5");
         Gleeble5AttackButton.SetActive(false);
+
+        if (enemyThree.GetComponent("GlorbbusGleebbus") != null)
+        {
+            GGScr = enemyThree.GetComponent<GlorbbusGleebbus>();
+            numberOfEnemies++;
+            GGSprite = GameObject.Find("Glorbbus_Gleebbus");
+            GGSprite.SetActive(true);
+        }
+        else
+        {
+            GGSprite = GameObject.Find("Glorbbus_Gleebbus");
+            GGSprite.SetActive(false);
+        }
     }
 
     void Update()
     {
         if (CaptainScr.captainHealth <= 0)
         {
-            Debug.Log("Unlucky You Lose.");
+            aTurnActive = true;
+            CaptainAttackButton.SetActive(false);
+            EngineerAttackButton.SetActive(false);
+            HRAttackButton.SetActive(false);
+            SurvivorAttackButton.SetActive(false);
+            Gleeble1AttackButton.SetActive(false);
+            Gleeble2AttackButton.SetActive(false);
+            Gleeble3AttackButton.SetActive(false);
+            Gleeble4AttackButton.SetActive(false);
+            Gleeble5AttackButton.SetActive(false);
+            deathScreen.SetActive(true);
             // need to play rewind time / death scene here
         }
 
@@ -283,10 +315,22 @@ public class FightController : MonoBehaviour
                 numberOfEnemies--;
             }
         }
+        if (GGScr != null)
+        {
+            if (GGScr.GGHealth <= 0)
+            {
+                Debug.Log("Glorbbus Gleebbus is Dead");
+                GGSprite.SetActive(false);
+                Destroy(GGScr);
+                numberOfEnemies--;
+            }
+        }
 
         if (numberOfEnemies == 0)
         {
-            Debug.Log("You Win");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+            text.SetActive(true);
         }
     }
 
@@ -317,6 +361,10 @@ public class FightController : MonoBehaviour
         {
             Gleeble5AttackButton.gameObject.SetActive(true);
             Gleeble5Sprite.gameObject.SetActive(true);
+        }
+        if (GGScr != null)
+        {
+            Gleeble3AttackButton.gameObject.SetActive(true);
         }
         CaptainAttackButton.SetActive(false);
         nextAttackAttackDamage = CaptainScr.captainAttack;
@@ -350,6 +398,10 @@ public class FightController : MonoBehaviour
             Gleeble5AttackButton.gameObject.SetActive(true);
             Gleeble5Sprite.gameObject.SetActive(true);
         }
+        if (GGScr != null)
+        {
+            Gleeble3AttackButton.gameObject.SetActive(true);
+        }
         EngineerAttackButton.SetActive(false);
         nextAttackAttackDamage = EngineerScr.engineerAttack;
     }
@@ -382,6 +434,10 @@ public class FightController : MonoBehaviour
             Gleeble5AttackButton.gameObject.SetActive(true);
             Gleeble5Sprite.gameObject.SetActive(true);
         }
+        if (GGScr != null)
+        {
+            Gleeble3AttackButton.gameObject.SetActive(true);
+        }
         HRAttackButton.SetActive(false);
         nextAttackAttackDamage = HRScr.HRAttack;
     }
@@ -413,6 +469,10 @@ public class FightController : MonoBehaviour
         {
             Gleeble5AttackButton.gameObject.SetActive(true);
             Gleeble5Sprite.gameObject.SetActive(true);
+        }
+        if (GGScr != null)
+        {
+            Gleeble3AttackButton.gameObject.SetActive(true);
         }
         SurvivorAttackButton.SetActive(false);
         nextAttackAttackDamage = SurvivorScr.survivorAttack;
@@ -455,6 +515,10 @@ public class FightController : MonoBehaviour
         if (Gleeble3 != null)
         {
             Gleeble3.gleebleHealth = Gleeble3.gleebleHealth - nextAttackAttackDamage;
+        }
+        if (GGScr != null)
+        {
+            GGScr.GGHealth = GGScr.GGHealth - nextAttackAttackDamage;
         }
         Debug.Log("Attacks for " + nextAttackAttackDamage);
         nextAttackAttackDamage = 0;
@@ -745,6 +809,55 @@ public class FightController : MonoBehaviour
         }
         Gleeble5.myTurnEnd();
         Debug.Log("Gleeble attacks for " + Gleeble5.gleebleAttack);
+        aTurnActive = false;
+    }
+
+    public void GGAttack()
+    {
+        attackTarget = Random.Range(1, numberOfAllies + 1);
+        if (attackTarget == 1)
+        {
+            Debug.Log("Captain would hurt");
+            CaptainScr.captainHealth = CaptainScr.captainHealth - GGScr.GGAttack;
+        }
+        if (attackTarget == 2)
+        {
+            if (EngineerScr != null)
+            {
+                Debug.Log("Engineer would hurt");
+                EngineerScr.engineerHealth = EngineerScr.engineerHealth - GGScr.GGAttack;
+            }
+            else if (HRScr != null)
+            {
+                Debug.Log("HR would hurt");
+                HRScr.HRHealth = HRScr.HRHealth - GGScr.GGAttack;
+            }
+            else
+            {
+                Debug.Log("Survivor would hurt");
+                SurvivorScr.survivorHealth = SurvivorScr.survivorHealth - GGScr.GGAttack;
+            }
+        }
+        if (attackTarget == 3)
+        {
+            if (HRScr != null)
+            {
+                Debug.Log("HR would hurt");
+                HRScr.HRHealth = HRScr.HRHealth - GGScr.GGAttack;
+            }
+            else
+            {
+                Debug.Log("Survivor would hurt");
+                SurvivorScr.survivorHealth = SurvivorScr.survivorHealth - GGScr.GGAttack;
+            }
+        }
+        if (attackTarget == 4)
+        {
+            Debug.Log("Survivor would hurt");
+            SurvivorScr.survivorHealth = SurvivorScr.survivorHealth - GGScr.GGAttack;
+        }
+        GGScr.myTurnEnd();
+        Debug.Log("HE attacks for " + GGScr.GGAttack);
         aTurnActive = false;
     }
 }
