@@ -1382,7 +1382,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 666314191}
-  - component: {fileID: 666314192}
   m_Layer: 0
   m_Name: Enemy3
   m_TagString: Untagged
@@ -1406,24 +1405,6 @@ Transform:
   - {fileID: 918765719}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &666314192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666314190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 182f7af83f552d748990e7965916f45f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FightController: {fileID: 0}
-  gleebleAttack: 0
-  gleebleHealth: 0
-  gleebleSpeed: 0
-  turnCountUp: 0
-  myTurnNow: 0
 --- !u!1 &767176634
 GameObject:
   m_ObjectHideFlags: 0
@@ -1520,7 +1501,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 789689237}
-  - component: {fileID: 789689238}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Untagged
@@ -1544,24 +1524,6 @@ Transform:
   - {fileID: 899458427}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &789689238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 789689236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 182f7af83f552d748990e7965916f45f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FightController: {fileID: 0}
-  gleebleAttack: 0
-  gleebleHealth: 0
-  gleebleSpeed: 0
-  turnCountUp: 0
-  myTurnNow: 0
 --- !u!1 &876504292
 GameObject:
   m_ObjectHideFlags: 0
@@ -2373,7 +2335,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1476758845}
-  - component: {fileID: 1476758846}
   m_Layer: 0
   m_Name: Enemy5
   m_TagString: Untagged
@@ -2397,24 +2358,6 @@ Transform:
   - {fileID: 516007618}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1476758846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1476758844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 182f7af83f552d748990e7965916f45f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FightController: {fileID: 0}
-  gleebleAttack: 0
-  gleebleHealth: 0
-  gleebleSpeed: 0
-  turnCountUp: 0
-  myTurnNow: 0
 --- !u!1 &1482741890
 GameObject:
   m_ObjectHideFlags: 0
@@ -2557,7 +2500,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1527363369}
-  - component: {fileID: 1527363370}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Untagged
@@ -2581,24 +2523,6 @@ Transform:
   - {fileID: 653851303}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1527363370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1527363367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 182f7af83f552d748990e7965916f45f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FightController: {fileID: 0}
-  gleebleAttack: 0
-  gleebleHealth: 0
-  gleebleSpeed: 0
-  turnCountUp: 0
-  myTurnNow: 0
 --- !u!1 &1536911579
 GameObject:
   m_ObjectHideFlags: 0
@@ -3100,7 +3024,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1640603718}
-  - component: {fileID: 1640603719}
   m_Layer: 0
   m_Name: Enemy4
   m_TagString: Untagged
@@ -3124,24 +3047,6 @@ Transform:
   - {fileID: 593262666}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1640603719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640603717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 182f7af83f552d748990e7965916f45f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FightController: {fileID: 0}
-  gleebleAttack: 0
-  gleebleHealth: 0
-  gleebleSpeed: 0
-  turnCountUp: 0
-  myTurnNow: 0
 --- !u!1 &1705950450
 GameObject:
   m_ObjectHideFlags: 0
