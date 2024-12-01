@@ -42,6 +42,7 @@ public class Captain : MonoBehaviour
     {
         Debug.Log("Captain Turn");
         FightController.CaptainAttackButton.SetActive(true);
+        FightController.CaptainSprite.SetActive(true);
         FightController.aTurnActive = true;
     }
 

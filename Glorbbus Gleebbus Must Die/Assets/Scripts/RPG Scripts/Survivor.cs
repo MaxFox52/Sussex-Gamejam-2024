@@ -42,6 +42,7 @@ public class Survivor : MonoBehaviour
     {
         Debug.Log("Survivor Turn");
         FightController.SurvivorAttackButton.SetActive(true);
+        FightController.SurvivorSprite.SetActive(true);
         FightController.aTurnActive = true;
     }
 

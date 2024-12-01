@@ -39,113 +39,144 @@ public class FightController : MonoBehaviour
     public GameObject Gleeble4AttackButton;
     public GameObject Gleeble5AttackButton;
 
+    public GameObject CaptainSprite;
+    public GameObject EngineerSprite;
+    public GameObject HRSprite;
+    public GameObject SurvivorSprite;
+    public GameObject Gleeble1Sprite;
+    public GameObject Gleeble2Sprite;
+    public GameObject Gleeble3Sprite;
+    public GameObject Gleeble4Sprite;
+    public GameObject Gleeble5Sprite;
+
+
     public bool aTurnActive = false;
 
     void Start()
     {
+        // setting up captain
         if (Captain.GetComponent("Captain") != null)
         {
             CaptainScr = Captain.GetComponent<Captain>();
-            CaptainAttackButton = GameObject.Find("CaptainAttack");
-            CaptainAttackButton.SetActive(false);
             numberOfAllies++;
         }
+        CaptainAttackButton = GameObject.Find("CaptainAttack");
+        CaptainAttackButton.SetActive(false);
+        CaptainSprite = GameObject.Find("CaptainSprite");
+        CaptainSprite.SetActive(false);
+
+        // setting up engineer
         if (Engineer.GetComponent("Engineer") != null)
         {
             EngineerScr = Engineer.GetComponent<Engineer>();
-            EngineerAttackButton = GameObject.Find("EngineerAttack");
-            EngineerAttackButton.SetActive(false);
             numberOfAllies++;
         }
-        else
-        {
-            EngineerAttackButton = GameObject.Find("EngineerAttack");
-            EngineerAttackButton.SetActive(false);
-        }
+        EngineerAttackButton = GameObject.Find("EngineerAttack");
+        EngineerAttackButton.SetActive(false);
+        EngineerSprite = GameObject.Find("EngineerSprite");
+        EngineerSprite.SetActive(false);
+
+        // setting up HR
         if (HR.GetComponent("HR") != null)
         {
             HRScr = HR.GetComponent<HR>();
-            HRAttackButton = GameObject.Find("HRAttack");
-            HRAttackButton.SetActive(false);
             numberOfAllies++;
         }
-        else
-        {
-            HRAttackButton = GameObject.Find("HRAttack");
-            HRAttackButton.SetActive(false);
-        }
+        HRAttackButton = GameObject.Find("HRAttack");
+        HRAttackButton.SetActive(false);
+        HRSprite = GameObject.Find("HRSprite");
+        HRSprite.SetActive(false);
+
+        // setting up survivor
         if (Survivor.GetComponent("Survivor") != null)
         {
             SurvivorScr = Survivor.GetComponent<Survivor>();
-            SurvivorAttackButton = GameObject.Find("SurvivorAttack");
-            SurvivorAttackButton.SetActive(false);
             numberOfAllies++;
         }
-        else
-        {
-            SurvivorAttackButton = GameObject.Find("SurvivorAttack");
-            SurvivorAttackButton.SetActive(false);
-        }
+        SurvivorAttackButton = GameObject.Find("SurvivorAttack");
+        SurvivorAttackButton.SetActive(false);
+        SurvivorSprite = GameObject.Find("SurvivorSprite");
+        SurvivorSprite.SetActive(false);
 
         if (enemyOne.GetComponent("Gleeble") != null)
         {
             Gleeble1 = enemyOne.GetComponent<Gleeble>();
             Gleeble1AttackButton = GameObject.Find("GleebleAttack1");
             Gleeble1AttackButton.SetActive(false);
+            Gleeble1Sprite = GameObject.Find("Enemy1Sprite");
+            Gleeble1Sprite.SetActive(false);
             numberOfEnemies++;
         }
         else
         {
             Gleeble1AttackButton = GameObject.Find("GleebleAttack1");
             Gleeble1AttackButton.SetActive(false);
+            Gleeble1Sprite = GameObject.Find("Enemy1Sprite");
+            Gleeble1Sprite.SetActive(false);
         }
         if (enemyTwo.GetComponent("Gleeble") != null)
         {
             Gleeble2 = enemyTwo.GetComponent<Gleeble>();
             Gleeble2AttackButton = GameObject.Find("GleebleAttack2");
             Gleeble2AttackButton.SetActive(false);
+            Gleeble2Sprite = GameObject.Find("Enemy2Sprite");
+            Gleeble2Sprite.SetActive(false);
             numberOfEnemies++;
         }
         else
         {
             Gleeble2AttackButton = GameObject.Find("GleebleAttack2");
             Gleeble2AttackButton.SetActive(false);
+            Gleeble2Sprite = GameObject.Find("Enemy2Sprite");
+            Gleeble2Sprite.SetActive(false);
         }
         if (enemyThree.GetComponent("Gleeble") != null)
         {
             Gleeble3 = enemyThree.GetComponent<Gleeble>();
             Gleeble3AttackButton = GameObject.Find("GleebleAttack3");
             Gleeble3AttackButton.SetActive(false);
+            Gleeble3Sprite = GameObject.Find("Enemy3Sprite");
+            Gleeble3Sprite.SetActive(false);
             numberOfEnemies++;
         }
         else
         {
             Gleeble3AttackButton = GameObject.Find("GleebleAttack3");
             Gleeble3AttackButton.SetActive(false);
+            Gleeble3Sprite = GameObject.Find("Enemy3Sprite");
+            Gleeble3Sprite.SetActive(false);
         }
         if (enemyFour.GetComponent("Gleeble") != null)
         {
             Gleeble4 = enemyFour.GetComponent<Gleeble>();
             Gleeble4AttackButton = GameObject.Find("GleebleAttack4");
             Gleeble4AttackButton.SetActive(false);
+            Gleeble4Sprite = GameObject.Find("Enemy4Sprite");
+            Gleeble4Sprite.SetActive(false);
             numberOfEnemies++;
         }
         else
         {
             Gleeble4AttackButton = GameObject.Find("GleebleAttack4");
             Gleeble4AttackButton.SetActive(false);
+            Gleeble4Sprite = GameObject.Find("Enemy4Sprite");
+            Gleeble4Sprite.SetActive(false);
         }
         if (enemyFive.GetComponent("Gleeble") != null)
         {
             Gleeble5 = enemyFive.GetComponent<Gleeble>();
             Gleeble5AttackButton = GameObject.Find("GleebleAttack5");
             Gleeble5AttackButton.SetActive(false);
+            Gleeble5Sprite = GameObject.Find("Enemy5Sprite");
+            Gleeble5Sprite.SetActive(false);
             numberOfEnemies++;
         }
         else
         {
             Gleeble5AttackButton = GameObject.Find("GleebleAttack5");
             Gleeble5AttackButton.SetActive(false);
+            Gleeble5Sprite = GameObject.Find("Enemy5Sprite");
+            Gleeble5Sprite.SetActive(false);
         }
     }
 
@@ -242,24 +273,30 @@ public class FightController : MonoBehaviour
         if (Gleeble1 != null)
         {
             Gleeble1AttackButton.gameObject.SetActive(true);
+            Gleeble1Sprite.gameObject.SetActive(true);
         }
         if (Gleeble2 != null)
         {
             Gleeble2AttackButton.gameObject.SetActive(true);
+            Gleeble2Sprite.gameObject.SetActive(true);
         }
         if (Gleeble3 != null)
         {
             Gleeble3AttackButton.gameObject.SetActive(true);
+            Gleeble3Sprite.gameObject.SetActive(true);
         }
         if (Gleeble4 != null)
         {
             Gleeble4AttackButton.gameObject.SetActive(true);
+            Gleeble4Sprite.gameObject.SetActive(true);
         }
         if (Gleeble5 != null)
         {
             Gleeble5AttackButton.gameObject.SetActive(true);
+            Gleeble5Sprite.gameObject.SetActive(true);
         }
         CaptainAttackButton.SetActive(false);
+        CaptainSprite.SetActive(false);
         nextAttackAttackDamage = CaptainScr.captainAttack;
     }
 
@@ -269,24 +306,30 @@ public class FightController : MonoBehaviour
         if (Gleeble1 != null)
         {
             Gleeble1AttackButton.gameObject.SetActive(true);
+            Gleeble1Sprite.gameObject.SetActive(true);
         }
         if (Gleeble2 != null)
         {
             Gleeble2AttackButton.gameObject.SetActive(true);
+            Gleeble2Sprite.gameObject.SetActive(true);
         }
         if (Gleeble3 != null)
         {
             Gleeble3AttackButton.gameObject.SetActive(true);
+            Gleeble3Sprite.gameObject.SetActive(true);
         }
         if (Gleeble4 != null)
         {
             Gleeble4AttackButton.gameObject.SetActive(true);
+            Gleeble4Sprite.gameObject.SetActive(true);
         }
         if (Gleeble5 != null)
         {
             Gleeble5AttackButton.gameObject.SetActive(true);
+            Gleeble5Sprite.gameObject.SetActive(true);
         }
         EngineerAttackButton.SetActive(false);
+        EngineerSprite.SetActive(false);
         nextAttackAttackDamage = EngineerScr.engineerAttack;
     }
 
@@ -296,24 +339,30 @@ public class FightController : MonoBehaviour
         if (Gleeble1 != null)
         {
             Gleeble1AttackButton.gameObject.SetActive(true);
+            Gleeble1Sprite.gameObject.SetActive(true);
         }
         if (Gleeble2 != null)
         {
             Gleeble2AttackButton.gameObject.SetActive(true);
+            Gleeble2Sprite.gameObject.SetActive(true);
         }
         if (Gleeble3 != null)
         {
             Gleeble3AttackButton.gameObject.SetActive(true);
+            Gleeble3Sprite.gameObject.SetActive(true);
         }
         if (Gleeble4 != null)
         {
             Gleeble4AttackButton.gameObject.SetActive(true);
+            Gleeble4Sprite.gameObject.SetActive(true);
         }
         if (Gleeble5 != null)
         {
             Gleeble5AttackButton.gameObject.SetActive(true);
+            Gleeble5Sprite.gameObject.SetActive(true);
         }
         HRAttackButton.SetActive(false);
+        HRSprite.SetActive(false);
         nextAttackAttackDamage = HRScr.HRAttack;
     }
 
@@ -323,24 +372,30 @@ public class FightController : MonoBehaviour
         if (Gleeble1 != null)
         {
             Gleeble1AttackButton.gameObject.SetActive(true);
+            Gleeble1Sprite.gameObject.SetActive(true);
         }
         if (Gleeble2 != null)
         {
             Gleeble2AttackButton.gameObject.SetActive(true);
+            Gleeble2Sprite.gameObject.SetActive(true);
         }
         if (Gleeble3 != null)
         {
             Gleeble3AttackButton.gameObject.SetActive(true);
+            Gleeble3Sprite.gameObject.SetActive(true);
         }
         if (Gleeble4 != null)
         {
             Gleeble4AttackButton.gameObject.SetActive(true);
+            Gleeble4Sprite.gameObject.SetActive(true);
         }
         if (Gleeble5 != null)
         {
             Gleeble5AttackButton.gameObject.SetActive(true);
+            Gleeble5Sprite.gameObject.SetActive(true);
         }
         SurvivorAttackButton.SetActive(false);
+        SurvivorSprite.SetActive(false);
         nextAttackAttackDamage = SurvivorScr.survivorAttack;
     }
 
@@ -357,6 +412,11 @@ public class FightController : MonoBehaviour
         Gleeble3AttackButton.gameObject.SetActive(false);
         Gleeble4AttackButton.gameObject.SetActive(false);
         Gleeble5AttackButton.gameObject.SetActive(false);
+        Gleeble1Sprite.gameObject.SetActive(false);
+        Gleeble2Sprite.gameObject.SetActive(false);
+        Gleeble3Sprite.gameObject.SetActive(false);
+        Gleeble4Sprite.gameObject.SetActive(false);
+        Gleeble5Sprite.gameObject.SetActive(false);
         aTurnActive = false;
     }
 
@@ -373,6 +433,11 @@ public class FightController : MonoBehaviour
         Gleeble3AttackButton.gameObject.SetActive(false);
         Gleeble4AttackButton.gameObject.SetActive(false);
         Gleeble5AttackButton.gameObject.SetActive(false);
+        Gleeble1Sprite.gameObject.SetActive(false);
+        Gleeble2Sprite.gameObject.SetActive(false);
+        Gleeble3Sprite.gameObject.SetActive(false);
+        Gleeble4Sprite.gameObject.SetActive(false);
+        Gleeble5Sprite.gameObject.SetActive(false);
         aTurnActive = false;
     }
 
@@ -389,6 +454,11 @@ public class FightController : MonoBehaviour
         Gleeble3AttackButton.gameObject.SetActive(false);
         Gleeble4AttackButton.gameObject.SetActive(false);
         Gleeble5AttackButton.gameObject.SetActive(false);
+        Gleeble1Sprite.gameObject.SetActive(false);
+        Gleeble2Sprite.gameObject.SetActive(false);
+        Gleeble3Sprite.gameObject.SetActive(false);
+        Gleeble4Sprite.gameObject.SetActive(false);
+        Gleeble5Sprite.gameObject.SetActive(false);
         aTurnActive = false;
     }
 
@@ -405,6 +475,11 @@ public class FightController : MonoBehaviour
         Gleeble3AttackButton.gameObject.SetActive(false);
         Gleeble4AttackButton.gameObject.SetActive(false);
         Gleeble5AttackButton.gameObject.SetActive(false);
+        Gleeble1Sprite.gameObject.SetActive(false);
+        Gleeble2Sprite.gameObject.SetActive(false);
+        Gleeble3Sprite.gameObject.SetActive(false);
+        Gleeble4Sprite.gameObject.SetActive(false);
+        Gleeble5Sprite.gameObject.SetActive(false);
         aTurnActive = false;
     }
 
@@ -421,6 +496,11 @@ public class FightController : MonoBehaviour
         Gleeble3AttackButton.gameObject.SetActive(false);
         Gleeble4AttackButton.gameObject.SetActive(false);
         Gleeble5AttackButton.gameObject.SetActive(false);
+        Gleeble1Sprite.gameObject.SetActive(false);
+        Gleeble2Sprite.gameObject.SetActive(false);
+        Gleeble3Sprite.gameObject.SetActive(false);
+        Gleeble4Sprite.gameObject.SetActive(false);
+        Gleeble5Sprite.gameObject.SetActive(false);
         aTurnActive = false;
     }
 

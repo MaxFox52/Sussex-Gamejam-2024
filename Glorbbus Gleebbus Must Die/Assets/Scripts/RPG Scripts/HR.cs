@@ -42,6 +42,7 @@ public class HR : MonoBehaviour
     {
         Debug.Log("HR Turn");
         FightController.HRAttackButton.SetActive(true);
+        FightController.HRSprite.SetActive(true);
         FightController.aTurnActive = true;
     }
 

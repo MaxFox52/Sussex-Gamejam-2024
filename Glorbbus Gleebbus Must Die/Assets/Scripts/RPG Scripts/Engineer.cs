@@ -42,6 +42,7 @@ public class Engineer : MonoBehaviour
     {
         Debug.Log("Engineer Turn");
         FightController.EngineerAttackButton.SetActive(true);
+        FightController.EngineerSprite.SetActive(true);
         FightController.aTurnActive = true;
     }
 
