@@ -98,86 +98,60 @@ public class FightController : MonoBehaviour
         SurvivorSprite = GameObject.Find("SurvivorSprite");
         SurvivorSprite.SetActive(false);
 
+        // setting up gleeble 1
         if (enemyOne.GetComponent("Gleeble") != null)
         {
             Gleeble1 = enemyOne.GetComponent<Gleeble>();
-            Gleeble1AttackButton = GameObject.Find("GleebleAttack1");
-            Gleeble1AttackButton.SetActive(false);
-            Gleeble1Sprite = GameObject.Find("Enemy1Sprite");
-            Gleeble1Sprite.SetActive(false);
             numberOfEnemies++;
         }
-        else
-        {
-            Gleeble1AttackButton = GameObject.Find("GleebleAttack1");
-            Gleeble1AttackButton.SetActive(false);
-            Gleeble1Sprite = GameObject.Find("Enemy1Sprite");
-            Gleeble1Sprite.SetActive(false);
-        }
+        Gleeble1AttackButton = GameObject.Find("GleebleAttack1");
+        Gleeble1AttackButton.SetActive(false);
+        Gleeble1Sprite = GameObject.Find("Enemy1Sprite");
+        Gleeble1Sprite.SetActive(false);
+
+        // setting up gleeble 2
         if (enemyTwo.GetComponent("Gleeble") != null)
         {
             Gleeble2 = enemyTwo.GetComponent<Gleeble>();
-            Gleeble2AttackButton = GameObject.Find("GleebleAttack2");
-            Gleeble2AttackButton.SetActive(false);
-            Gleeble2Sprite = GameObject.Find("Enemy2Sprite");
-            Gleeble2Sprite.SetActive(false);
             numberOfEnemies++;
         }
-        else
-        {
-            Gleeble2AttackButton = GameObject.Find("GleebleAttack2");
-            Gleeble2AttackButton.SetActive(false);
-            Gleeble2Sprite = GameObject.Find("Enemy2Sprite");
-            Gleeble2Sprite.SetActive(false);
-        }
+        Gleeble2AttackButton = GameObject.Find("GleebleAttack2");
+        Gleeble2AttackButton.SetActive(false);
+        Gleeble2Sprite = GameObject.Find("Enemy2Sprite");
+        Gleeble2Sprite.SetActive(false);
+
+        // setting up gleeble 3
         if (enemyThree.GetComponent("Gleeble") != null)
         {
             Gleeble3 = enemyThree.GetComponent<Gleeble>();
-            Gleeble3AttackButton = GameObject.Find("GleebleAttack3");
-            Gleeble3AttackButton.SetActive(false);
-            Gleeble3Sprite = GameObject.Find("Enemy3Sprite");
-            Gleeble3Sprite.SetActive(false);
             numberOfEnemies++;
         }
-        else
-        {
-            Gleeble3AttackButton = GameObject.Find("GleebleAttack3");
-            Gleeble3AttackButton.SetActive(false);
-            Gleeble3Sprite = GameObject.Find("Enemy3Sprite");
-            Gleeble3Sprite.SetActive(false);
-        }
+        Gleeble3AttackButton = GameObject.Find("GleebleAttack3");
+        Gleeble3AttackButton.SetActive(false);
+        Gleeble3Sprite = GameObject.Find("Enemy3Sprite");
+        Gleeble3Sprite.SetActive(false);
+        
+        // setting up gleeble 3
         if (enemyFour.GetComponent("Gleeble") != null)
         {
             Gleeble4 = enemyFour.GetComponent<Gleeble>();
-            Gleeble4AttackButton = GameObject.Find("GleebleAttack4");
-            Gleeble4AttackButton.SetActive(false);
-            Gleeble4Sprite = GameObject.Find("Enemy4Sprite");
-            Gleeble4Sprite.SetActive(false);
             numberOfEnemies++;
         }
-        else
-        {
-            Gleeble4AttackButton = GameObject.Find("GleebleAttack4");
-            Gleeble4AttackButton.SetActive(false);
-            Gleeble4Sprite = GameObject.Find("Enemy4Sprite");
-            Gleeble4Sprite.SetActive(false);
-        }
+        Gleeble4AttackButton = GameObject.Find("GleebleAttack4");
+        Gleeble4AttackButton.SetActive(false);
+        Gleeble4Sprite = GameObject.Find("Enemy4Sprite");
+        Gleeble4Sprite.SetActive(false);
+
+        // setting up gleeble 5
         if (enemyFive.GetComponent("Gleeble") != null)
         {
             Gleeble5 = enemyFive.GetComponent<Gleeble>();
-            Gleeble5AttackButton = GameObject.Find("GleebleAttack5");
-            Gleeble5AttackButton.SetActive(false);
-            Gleeble5Sprite = GameObject.Find("Enemy5Sprite");
-            Gleeble5Sprite.SetActive(false);
             numberOfEnemies++;
         }
-        else
-        {
-            Gleeble5AttackButton = GameObject.Find("GleebleAttack5");
-            Gleeble5AttackButton.SetActive(false);
-            Gleeble5Sprite = GameObject.Find("Enemy5Sprite");
-            Gleeble5Sprite.SetActive(false);
-        }
+        Gleeble5AttackButton = GameObject.Find("GleebleAttack5");
+        Gleeble5AttackButton.SetActive(false);
+        Gleeble5Sprite = GameObject.Find("Enemy5Sprite");
+        Gleeble5Sprite.SetActive(false);
     }
 
     void Update()
